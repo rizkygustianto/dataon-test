@@ -5,5 +5,8 @@
     "pg": "^8.7.1",
     "postgres": "^1.0.2",
     "sequelize": "^6.6.5"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
