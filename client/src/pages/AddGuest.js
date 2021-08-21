@@ -18,7 +18,7 @@ export default function AddGuest() {
             name: name,
             dateOfBirth: date
         }
-        axios.post('http://localhost:3000/guest/create', data)
+        axios.post(' https://dataon-test-rgw.herokuapp.com/guest/create', data)
         .then(res => {
             console.log(res);
             history.push('/')

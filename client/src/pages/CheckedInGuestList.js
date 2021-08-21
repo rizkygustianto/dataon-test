@@ -10,7 +10,7 @@ export default function CheckedInGuestList() {
     const [purpose, setPurpose] = useState('')
 
     const getGuests = () => {
-        axios.get('http://localhost:3000/guests/current')
+        axios.get(' https://dataon-test-rgw.herokuapp.com/guests/current')
         .then(res => {
             console.log(res.data);
             setGuests(res.data)
@@ -21,7 +21,7 @@ export default function CheckedInGuestList() {
         let data = {
             idCard: id
         }
-        axios.post('http://localhost:3000/checkout', data)
+        axios.post(' https://dataon-test-rgw.herokuapp.com/checkout', data)
         .then(res => {
             console.log(res);
             getGuests()
@@ -33,7 +33,7 @@ export default function CheckedInGuestList() {
             idCard: nik,
             purpose: purpose
         }
-        axios.post('http://localhost:3000/checkin', data)
+        axios.post(' https://dataon-test-rgw.herokuapp.com/checkin', data)
         .then(res => {
             console.log(res);
             getGuests()

@@ -10,7 +10,7 @@ export default function GuestLogs() {
     const [guests, setGuests] = useState([])
 
     const getGuests = () => {
-        axios.get('http://localhost:3000/guests')
+        axios.get(' https://dataon-test-rgw.herokuapp.com/guests')
             .then(res => {
                 console.log(res.data);
                 setGuests(res.data)

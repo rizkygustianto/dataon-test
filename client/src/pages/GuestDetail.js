@@ -9,7 +9,7 @@ export default function GuestDetail() {
     const [guests, setGuests] = useState([])
 
     const getGuests = () => {
-        axios.get(`http://localhost:3000/guest/${id}`)
+        axios.get(` https://dataon-test-rgw.herokuapp.com/guest/${id}`)
             .then(res => {
                 console.log(res.data);
                 setGuests(res.data)
